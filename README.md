@@ -1,12 +1,13 @@
 # Joy_Xu
 technical assessment 
-Q1
+
+# Q1
 n = int(input())
 t_shirts = input().split()
 m = int(input())
 requests = input().split()
 
-# Create a dictionary to store the count of each T-shirt size in the shop
+
 t_shirts_count = {}
 for size in t_shirts:
     if size in t_shirts_count:
@@ -14,7 +15,7 @@ for size in t_shirts:
     else:
         t_shirts_count[size] = 1
 
-# Check if all requests can be fulfilled
+
 for size in requests:
     found = False
     for key in t_shirts_count:
@@ -28,7 +29,7 @@ for size in requests:
 else:
     print("Yes")
 
-Q2
+# Q2
 n = int(input())
 records = []
 for i in range(n):
@@ -53,7 +54,7 @@ else:
     print(" ".join(errorCodes))
 
 
-Q3
+# Q3
 SELECT o.owner_id, o.owner_name, COUNT(DISTINCT c.category_name) AS different_category_count
 FROM articles a
 JOIN categories c ON a.category_id = c.category_id
